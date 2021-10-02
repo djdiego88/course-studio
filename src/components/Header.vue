@@ -79,17 +79,7 @@
                         class="outline-none"
                         @click.prevent="() => (isOpen = !isOpen)"
                     >
-                        <svg
-                            class="w-8 h-8 text-white"
-                            fill="none"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            viewBox="0 0 32 32"
-                            stroke="currentColor"
-                        >
-                            <path d="M4 8h24M4 15h24M4 22h24"></path>
-                        </svg>
+                        <FontAwesomeIcon icon="bars" class="text-[2rem] text-white" />
                     </button>
                 </div>
                 <transition
@@ -112,29 +102,10 @@
                                     class="outline-none"
                                     @click.prevent="() => (isOpen = !isOpen)"
                                 >
-                                    <svg
-                                        viewPort="0 0 24 24"
-                                        version="1.1"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        class="w-6 h-6 text-white"
-                                    >
-                                        <line
-                                            x1="1"
-                                            y1="23"
-                                            x2="23"
-                                            y2="1"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                        />
-                                        <line
-                                            x1="1"
-                                            y1="1"
-                                            x2="23"
-                                            y2="23"
-                                            stroke="currentColor"
-                                            stroke-width="2"
-                                        />
-                                    </svg>
+                                    <FontAwesomeIcon
+                                        icon="times"
+                                        class="text-[2rem] text-white"
+                                    />
                                 </button>
                             </div>
                             <ul
@@ -165,8 +136,18 @@
 </template>
 
 <script>
+    import { library } from '@fortawesome/fontawesome-svg-core'
+    import { faBars, faTimes } from '@fortawesome/free-solid-svg-icons'
+    import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+
+    library.add(faBars, faTimes)
+
     export default {
         name: 'Header',
+
+        components: {
+            FontAwesomeIcon,
+        },
 
         data() {
             return {
