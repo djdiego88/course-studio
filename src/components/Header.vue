@@ -54,7 +54,7 @@
                     <li>
                         <a
                             class="px-4 py-2 cursor-pointer hover:underline last:!pr-0"
-                            href="#"
+                            href="#athletes"
                             >Athletes</a
                         >
                     </li>
@@ -112,7 +112,9 @@
                                 class="flex flex-col justify-center px-10 font-bold text-center uppercase divide-y py-14 divide-brand-dark"
                             >
                                 <li>
-                                    <a class="block px-4 py-4 cursor-pointer" href="#"
+                                    <a
+                                        class="block px-4 py-4 cursor-pointer"
+                                        href="#athletes"
                                         >Athletes</a
                                     >
                                 </li>
@@ -158,7 +160,7 @@
 
         mounted() {
             window.document.onscroll = () => {
-                if (window.scrollY > this.$refs.header.offsetHeight) {
+                if (window.scrollY > this.$refs.header?.offsetHeight * 0.66) {
                     this.isSticky = true
                 } else {
                     this.isSticky = false
