@@ -8,19 +8,16 @@
                 class="container flex flex-col items-end justify-start gap-8 px-4 mx-auto text-white md:gap-12 lg:gap-24 pt-28 md:pt-32 lg:pt-40 max-w-7xl md:flex-row"
             >
                 <div
-                    class="text-4xl md:text-8xl lg:text-9xl xl:text-[9rem] text-light-yellow w-full md:w-1/2 font-bold xl:leading-[7.5rem] tracking-tight text-center md:text-left"
+                    class="text-4xl md:text-8xl lg:text-9xl xl:text-[9rem] text-light-yellow w-full md:w-1/2 font-bold xl:leading-[7.5rem] tracking-tight text-center md:text-left uppercase" v-html="info.title"
                 >
-                    LOREM IPSUM. <strong>DOLORE AMET.</strong>
                 </div>
                 <div
                     class="w-full text-base font-semibold text-center md:text-2xl lg:text-3xl text-light-yellow md:w-1/3 md:text-left"
+                    v-html="info.subtitle"
                 >
-                    <strong>Lorem ipsum</strong> dolor sit amet, consectetur adipiscing
-                    elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua.
                 </div>
             </div>
-            <div class="flex justify-center my-8 md:my-14">
+            <div class="flex justify-center my-7 md:my-14">
                 <div
                     class="flex items-center justify-center w-16 h-16 text-xs font-semibold text-center text-white uppercase rounded-full md:font-bold md:w-24 md:h-24 md:text-sm bg-darker-gray"
                 >
@@ -52,6 +49,10 @@
             FontAwesomeIcon,
         },
 
+        props: {
+            info: Object,
+        },
+
         data() {
             return {
                 isSticky: false,
@@ -62,8 +63,8 @@
 </script>
 
 <style lang="postcss" scoped>
-    strong {
-        @apply text-brand;
-        font-weight: inherit;
+    ::v-deep strong {
+        @apply !text-brand;
+        font-weight: inherit !important;
     }
 </style>

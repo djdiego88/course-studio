@@ -1,7 +1,7 @@
 <template>
     <div class="relative">
         <Header />
-        <Hero />
+        <Hero :info="info.hero" />
         <Athletes />
         <Footer />
     </div>
@@ -15,11 +15,26 @@
 
     export default {
         name: 'App',
+
         components: {
             Header,
             Footer,
             Hero,
             Athletes,
+        },
+
+        data() {
+            return {
+                info: {
+                    hero: {}
+                },
+            }
+        },
+
+        created() {
+            fetch('/json/cs.json')
+                .then(response => response.json())
+                .then(info => (this.info = info))
         },
     }
 </script>

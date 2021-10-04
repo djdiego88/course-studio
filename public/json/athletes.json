@@ -1,0 +1,44 @@
+{
+    "title": "Lorem ipsum dolor sit amet, consectetur adipiscing.",
+    "athletes": [
+        {
+            "id": "1",
+            "name": "Neymar Jr.",
+            "image":"https://i.postimg.cc/BQyVY3Ds/Neymar-Getty-Images-1280084624.jpg",
+            "category": "Football",
+            "url": "#"
+        },
+        {
+            "id": "2",
+            "name": "Pelé",
+            "image":"https://i.postimg.cc/hPhY1vXp/JH7-S77-TVO5-CKVASBOS3-NHTVSEI.jpg",
+            "category": "Football",
+            "url": "#"
+        },
+        {
+            "id": "3",
+            "name": "Marcus Rashford",
+            "image":"https://i.postimg.cc/6qbmNJmr/40587862-9372125-image-a-7-1615988744721.jpg",
+            "category": "Football",
+            "url": "#"
+        },
+        {
+            "id": "4",
+            "name": "Radamel Falcao",
+            "image":"https://i.postimg.cc/2SZXgtFW/radamel-falcao-colombia-1140x667.jpg",
+            "category": "Football",
+            "url": "#"
+        },
+        {
+            "id": "5",
+            "name": "Cristiano Ronaldo",
+            "image":"https://i.postimg.cc/xj67mM1X/cristiano-ronaldo-termino-maximo-goleador.jpg",
+            "category": "Football",
+            "url": "#"
+        }
+    ],
+    "more": {
+        "link": "#",
+        "text": "See all Athletes"
+    }
+}
